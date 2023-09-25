@@ -1,6 +1,11 @@
 #ifndef LIB_SOCKET_LIBRARY_H
 #define LIB_SOCKET_LIBRARY_H
+#define TAILLE_MAX_DATA 10000
 
-void hello();
+int ServerSocket(int port);
+int Accept(int sEcoute,char *ipClient);
+int ClientSocket(char* ipServeur,int portServeur);
+int Send(int sSocket,char* data,int taille);
+int Receive(int sSocket,char* data);
 
 #endif //LIB_SOCKET_LIBRARY_H
